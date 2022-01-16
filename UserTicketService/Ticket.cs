@@ -4,7 +4,7 @@ using System.Text;
 
 namespace UserTicketService
 {
-    class Ticket
+    public class Ticket
     {
         public int Id { get; }
         public string Description { get; }

@@ -55,5 +55,12 @@ namespace UserTicketService.Tests
             Assert.That(mockUserRepos.Object.FindAll().Any(user => user.Name == "Алексей"));
         }
 
+        [Test]
+        public void GetTicketMustReturnNotNullableTicket()
+        {
+            var ticketServiceTest = new TicketService();
+            Assert.IsNotNull(ticketServiceTest.GetTicket(1));
+        }
+
     }
 }
